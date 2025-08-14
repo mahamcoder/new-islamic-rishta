@@ -52,7 +52,7 @@ const Footer = () => {
           <div className="flex flex-col items-start px-4 sm:px-6 md:px-0">
             <h3 className="text-white font-semibold mb-3">Contact</h3>
             <div className="space-y-1 text-base text-gray-400 text-left w-full">
-              <a className='mb-4' href="mailto:helpmarryingmuslims.com">helpmarryingmuslims.com</a>
+              <a className='mb-4' href="mailto:help@marryingmuslims.com">helpmarryingmuslims.com</a>
                <h3 className="text-white font-semibold ">Address:</h3>
               <p>JPJ7+7GM,At-Thamiri street</p>
               <p>Ad-Dirah,Riyadh</p>
