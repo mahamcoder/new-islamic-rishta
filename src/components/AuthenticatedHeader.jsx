@@ -99,7 +99,7 @@ const AuthenticatedHeader = () => {
             <div className=" rounded-full flex items-center justify-center mr-3 overflow-hidden">
               <img src={logo} alt="Heart MM Logo" className="w-12 h-12 object-contain" />
             </div>
-            <h1 className="text-xl font-bold text-gray-900">MarryingMuslims</h1>
+            <h1 className="text-xl font-bold text-gray-900">Marrying Muslims</h1>
           </Link>
 
           {/* Navigation Links (show on search and profile pages) */}

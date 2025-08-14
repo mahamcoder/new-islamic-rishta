@@ -10,15 +10,20 @@ const Footer = () => {
       <button
         onClick={e => {
           e.currentTarget.classList.add('scale-90');
-          // Custom smooth scroll up in steps
-          const scrollStep = () => {
-            const currentScroll = window.scrollY;
-            if (currentScroll > 0) {
-              window.scrollBy(0, -60); // larger step for faster scroll
-              setTimeout(scrollStep, 8); // faster interval
+          // Scroll to top in exactly 2 seconds
+          const totalDuration = 700; // ms
+          const start = window.scrollY;
+          const startTime = performance.now();
+          function animateScroll(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / totalDuration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+            window.scrollTo(0, start * (1 - ease));
+            if (progress < 1) {
+              requestAnimationFrame(animateScroll);
             }
-          };
-          scrollStep();
+          }
+          requestAnimationFrame(animateScroll);
           setTimeout(() => {
             e.currentTarget.classList.remove('scale-90');
           }, 150);

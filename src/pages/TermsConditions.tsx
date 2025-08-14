@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { FileText, Users, Shield, Globe, Copyright, AlertTriangle, Phone, Lock } from 'lucide-react';
 import Header from '../components/Header';
 import { ArrowUp } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const TermsConditions = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const TermsConditions = () => {
     <>
     <Header />
   <div className="min-h-screen bg-pink-50 py-8 px-4 relative">
-      <button
+      {/* <button
         onClick={() => {
           const scrollStep = () => {
             const currentScroll = window.scrollY;
@@ -29,7 +30,7 @@ const TermsConditions = () => {
         style={{ transition: 'transform 0.15s' }}
       >
         <ArrowUp className="w-6 h-6" />
-      </button>
+      </button> */}
       <div className="max-w-4xl mx-auto">
         <div className="mb-4">
           <a href="/" className="inline-flex items-center text-red-600 hover:text-red-800 font-medium">
@@ -47,7 +48,7 @@ const TermsConditions = () => {
             <h2 className="text-xl font-semibold text-gray-900">Agreement To Our Terms</h2>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            These Terms and Conditions outline the rules and regulations for the use of the Marrying Muslims Islamic Matrimonial Platform. By accessing this platform, you agree to these terms. Please refrain from using MarryingMuslims if you do not accept all the terms stated on this page.
+            These Terms and Conditions outline the rules and regulations for the use of the Marrying Muslims Islamic Matrimonial Platform. By accessing this platform, you agree to these terms. Please refrain from using Marrying Muslims if you do not accept all the terms stated on this page.
           </p>
         </div>
 
@@ -96,7 +97,7 @@ const TermsConditions = () => {
             </li>
             <li className="flex items-start gap-2">
               <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-              <span><strong>Exclusion of Liability Claims:</strong> The owner, business, or brand of MarryingMuslims is not liable for any disputes arising from interactions between users, including emotional distress or financial loss. MarryingMuslims shall not be held responsible for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the platform.</span>
+              <span><strong>Exclusion of Liability Claims:</strong> The owner, business, or brand of Marrying Muslims is not liable for any disputes arising from interactions between users, including emotional distress or financial loss. Marrying Muslims shall not be held responsible for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the platform.</span>
             </li>
           </ul>
         </div>
@@ -109,7 +110,7 @@ const TermsConditions = () => {
           </div>
           <p className="text-gray-700 mb-4">We reserve the right to restrict or terminate accounts that violate our terms. All interactions and communications on the platform must remain respectful and align with Islamic principles.</p>
           <p className="text-gray-700">
-           MarryingMuslims is not responsible for the accuracy of user-generated content or the outcomes of any matches made.
+           Marrying Muslims is not responsible for the accuracy of user-generated content or the outcomes of any matches made.
           </p>
         </div>
 
@@ -255,7 +256,7 @@ const TermsConditions = () => {
 </p>
 
           <p className="text-gray-700">
-            <strong>Indemnification:</strong> You agree to indemnify and not to hold Marrying Muslims, its owners, and its affiliates from any claims, losses, liabilities, damages, costs, or expenses, including reasonable solicitor fees, arising out of or relating to your use of the platform or your violation of this Privacy Policy..
+            <strong>Indemnification:</strong> You agree to indemnify and not to hold Marrying Muslims, its owners, and its affiliates from any claims, losses, liabilities, damages, costs, or expenses, including reasonable solicitor fees, arising out of or relating to your use of the platform or your violation of this Privacy Policy.
           </p>
         </div>
          {/* Contact Us */}
@@ -271,8 +272,11 @@ const TermsConditions = () => {
             </a>
           </p>
         </div>
+      
       </div>
+       
     </div>
+     <Footer/>
     </>
   );
 };

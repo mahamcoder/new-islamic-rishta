@@ -83,9 +83,10 @@ const Dashboard = () => {
           </p>
         </div>
 
-        {/* Stats Card */}
-        <div className="mb-8 w-full max-w-sm">
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 w-full">
+        {/* All Cards in One Responsive Row */}
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 w-full max-w-10xl mx-auto mb-8 overflow-x-auto pb-2">
+          {/* Profile Views Card */}
+          <div className="flex-1 min-w-[400px] max-w-xs bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 flex flex-col justify-between">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-gray-700 font-medium text-sm sm:text-base">Profile Views</h3>
               <User className="w-5 h-5 text-gray-400" />
@@ -98,13 +99,9 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Action Cards */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-4xl">
           {/* Find Matches Card */}
-          <Link to="/search">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 hover:shadow-md transition-shadow cursor-pointer w-full max-w-md">
+          <Link to="/search" className="flex-1 min-w-[400px] max-w-xs">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col justify-between">
               <div className="flex items-start space-x-3 sm:space-x-4">
                 <Search className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
                 <div className="flex-1">
@@ -118,9 +115,9 @@ const Dashboard = () => {
               </div>
             </div>
           </Link>
-          <Link to="/profile">
-            {/* My Profile Card */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 hover:shadow-md transition-shadow cursor-pointer w-full max-w-md">
+          {/* My Profile Card */}
+          <Link to="/profile" className="flex-1 min-w-[400px] max-w-xs">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col justify-between">
               <div className="flex items-start space-x-3 sm:space-x-4">
                 <User className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
                 <div className="flex-1">

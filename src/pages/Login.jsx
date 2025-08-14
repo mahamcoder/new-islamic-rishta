@@ -101,7 +101,7 @@ const Login = () => {
             <img src={logo} alt="Heart MM Logo" className="w-16 h-16 object-contain" />
           </div>
           <div className="text-left">
-            <h1 className="text-3xl font-bold text-red-900">MarryingMuslims</h1>
+            <h1 className="text-3xl font-bold text-red-900">Marrying Muslims</h1>
             <p className="text-sm text-gray-600">Marriage The Halal Way</p>
           </div>
         </div>

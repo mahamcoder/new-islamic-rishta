@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Header from "../components/Header";
 import { ArrowUp } from 'lucide-react';
+import Footer from "../components/Footer";
 
 const CookiePolicy = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const CookiePolicy = () => {
     <>
       <Header />
   <div className="min-h-screen bg-pink-50 py-8 px-4 relative">
-        <button
+        {/* <button
           onClick={() => {
             const scrollStep = () => {
               const currentScroll = window.scrollY;
@@ -36,7 +37,7 @@ const CookiePolicy = () => {
           style={{ transition: 'transform 0.15s' }}
         >
           <ArrowUp className="w-6 h-6" />
-        </button>
+        </button> */}
         <div className="max-w-4xl mx-auto">
           <div className="mb-4">
             <a href="/" className="inline-flex items-center text-red-600 hover:text-red-800 font-medium">
@@ -196,6 +197,7 @@ const CookiePolicy = () => {
           </div>
         </div>
       </div>
+       <Footer/>
     </>
   );
 };
