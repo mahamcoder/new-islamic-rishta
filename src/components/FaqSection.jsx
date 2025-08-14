@@ -21,7 +21,7 @@ const faqData = [
   {
     id: 4,
     question: "How do I create a profile?",
-    answer: "Click Sign Up and fill out our comprehensive Islamic-focused form. You’ll need to provide personal details, Islamic background, guardian information, and your expectations for marriage."
+    answer: "Click Sign Up and fill out our comprehensive Islamic-focused form. You’ll need to provide personal details, Islamic background, Wali (guardian) contact details, and your expectations for marriage. You must use the Wali contact details when signing up with us, this is to ensure we are doing things the correct way when contact is made."
   },
   {
     id: 5,
