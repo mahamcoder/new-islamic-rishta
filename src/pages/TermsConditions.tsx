@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 // import BackButton from '../components/BackButton';
 import { FileText, Users, Shield, Globe, Copyright, AlertTriangle, Phone, Lock } from 'lucide-react';
 import Header from '../components/Header';
+import { ArrowUp } from 'lucide-react';
 
 const TermsConditions = () => {
   useEffect(() => {
@@ -10,7 +11,25 @@ const TermsConditions = () => {
   return (
     <>
     <Header />
-    <div className="min-h-screen bg-pink-50 py-8 px-4">
+  <div className="min-h-screen bg-pink-50 py-8 px-4 relative">
+      <button
+        onClick={() => {
+          const scrollStep = () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 0) {
+              window.scrollBy(0, -80);
+              setTimeout(scrollStep, 5);
+            }
+          };
+          scrollStep();
+        }}
+        className="absolute left-4 bottom-4 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg p-3 flex items-center justify-center transition-all duration-200 z-20"
+        title="Back to Top"
+        aria-label="Back to Top"
+        style={{ transition: 'transform 0.15s' }}
+      >
+        <ArrowUp className="w-6 h-6" />
+      </button>
       <div className="max-w-4xl mx-auto">
         <div className="mb-4">
           <a href="/" className="inline-flex items-center text-red-600 hover:text-red-800 font-medium">
@@ -57,27 +76,27 @@ const TermsConditions = () => {
 
         {/* Protective Measures for Our Business */}
         <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-          <div className="flex items-center mb-6">
-            <Shield className="w-6 h-6 text-red-500 mr-3" />
+          <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6 gap-2">
+            <Shield className="w-6 h-6 text-red-500 mr-0 sm:mr-3 mb-2 sm:mb-0" />
             <h2 className="text-xl font-semibold text-gray-900">Protective Measures For Our Business</h2>
           </div>
-          <p className="text-gray-700 mb-4">To protect our business and its owners from liability, harm, loss, and potential prosecution, we have established the following measures:</p>
-          <ul className="space-y-3 text-gray-700">
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <strong>User Profile Verification:</strong> We maintain a stringent verification process for user profiles to ensure authenticity and reduce fraudulent activity on the platform.
+          <p className="text-gray-700 mb-6 text-base leading-relaxed">To protect our business and its owners from liability, harm, loss, and potential prosecution, we have established the following measures:</p>
+          <ul className="space-y-4 text-gray-700 pl-2 sm:pl-4">
+            <li className="flex items-start gap-2">
+              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span><strong>User Profile Verification:</strong> We maintain a stringent verification process for user profiles to ensure authenticity and reduce fraudulent activity on the platform.</span>
             </li>
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <strong>Content Moderation:</strong> Our team actively monitors and reviews content to promptly remove any offensive or inappropriate material, safeguarding our community standards.
+            <li className="flex items-start gap-2">
+              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span><strong>Content Moderation:</strong> Our team actively monitors and reviews content to promptly remove any offensive or inappropriate material, safeguarding our community standards.</span>
             </li>
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <strong>Account Termination:</strong> We reserve the right to remove any account or profile without warning or explanation if we believe it violates our terms or poses a risk to the platform.
+            <li className="flex items-start gap-2">
+              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span><strong>Account Termination:</strong> We reserve the right to remove any account or profile without warning or explanation if we believe it violates our terms or poses a risk to the platform.</span>
             </li>
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <strong>Exclusion of Liability Claims:</strong>  The owner, business, or brand of MarryingMuslims is not liable for any disputes arising from interactions between users, including emotional distress or financial loss. MarryingMuslims shall not be held responsible for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the platform.
+            <li className="flex items-start gap-2">
+              <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+              <span><strong>Exclusion of Liability Claims:</strong> The owner, business, or brand of MarryingMuslims is not liable for any disputes arising from interactions between users, including emotional distress or financial loss. MarryingMuslims shall not be held responsible for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the platform.</span>
             </li>
           </ul>
         </div>

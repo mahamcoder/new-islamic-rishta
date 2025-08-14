@@ -28,7 +28,7 @@ const Header = () => {
             <div className="bg-red-600 rounded-full p-2 mr-3">
               <Heart className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-red-900">MarryingMuslims</span>
+            <span className="text-xl font-bold text-red-900">Marrying Muslims</span>
           </div>
 
           {/* Desktop Nav */}

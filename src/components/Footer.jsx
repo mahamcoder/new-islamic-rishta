@@ -1,10 +1,35 @@
 import React from 'react'
+import { ArrowUp } from 'lucide-react';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div>
+    <div className="relative">
+      {/* Back to Top Arrow Button - left corner, only in footer */}
+      <button
+        onClick={e => {
+          e.currentTarget.classList.add('scale-90');
+          // Custom smooth scroll up in steps
+          const scrollStep = () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 0) {
+              window.scrollBy(0, -60); // larger step for faster scroll
+              setTimeout(scrollStep, 8); // faster interval
+            }
+          };
+          scrollStep();
+          setTimeout(() => {
+            e.currentTarget.classList.remove('scale-90');
+          }, 150);
+        }}
+        className="absolute left-4 bottom-4 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg p-3 flex items-center justify-center transition-all duration-200 z-20 active:scale-90"
+        title="Back to Top"
+        aria-label="Back to Top"
+        style={{ transition: 'transform 0.15s' }}
+      >
+        <ArrowUp className="w-6 h-6" />
+      </button>
        {/* Footer */}
     <footer className="bg-gray-900 text-white py-8 md:py-12">
       <div>
@@ -22,7 +47,7 @@ const Footer = () => {
               <div className="w-10 h-10  rounded-full flex items-center justify-center mr-2 overflow-hidden">
                 <img src={logo} alt="Heart MM Logo" className="w-16 h-16  rounded-full object-contain"/>
               </div>
-              <h3 className='text-xl font-bold'>MarryingMuslims</h3>
+              <h3 className='text-xl font-bold'>Marrying Muslims</h3>
             </div>
             <p className="text-gray-400 text-left text-sm leading-relaxed max-w-xs">
               Connecting Muslim hearts worldwide with dignity and respect.
@@ -52,7 +77,7 @@ const Footer = () => {
           <div className="flex flex-col items-start px-4 sm:px-6 md:px-0">
             <h3 className="text-white font-semibold mb-3">Contact</h3>
             <div className="space-y-1 text-base text-gray-400 text-left w-full">
-              <a className='mb-4' href="mailto:help@marryingmuslims.com">helpmarryingmuslims.com</a>
+              <a className='mb-4' href="mailto:help@marryingmuslims.com">help@marryingmuslims.com</a>
                <h3 className="text-white font-semibold ">Address:</h3>
               <p>JPJ7+7GM,At-Thamiri street</p>
               <p>Ad-Dirah,Riyadh</p>
@@ -63,7 +88,7 @@ const Footer = () => {
 
   {/* Copyright */}
   <div className="border-t border-gray-800 mt-8 pt-6 text-center px-4 sm:px-6 md:px-0">
-          <p className="text-gray-400 text-xs sm:text-sm">© 2025 MarryingMuslims. All rights reserved.</p>
+          <p className="text-gray-400 text-xs sm:text-sm">© 2025 Marrying Muslims. All rights reserved.</p>
         </div>
       </div>
     </footer>

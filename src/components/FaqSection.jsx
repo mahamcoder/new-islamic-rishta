@@ -77,7 +77,7 @@ const faqData = [
  {
     id: 17,
     question: "How can I get help?",
-  answer: 'For assistance, please <a class="text-red-600" href="mailto:help@marryingmuslims.com">help@marryingmuslims.com</a>. We’re here to help with profile setup, technical issues, payment problems, and general platform questions. Our typical response time is 24–48 hours.'
+  answer: 'For assistance, please contact <a class="text-red-600" href="mailto:help@marryingmuslims.com">help@marryingmuslims.com</a>. We are here to help with profile setup, technical issues, payment problems and general platform questions. Our typical response time is 24–48 hours.'
   },
   {
     id: 18,

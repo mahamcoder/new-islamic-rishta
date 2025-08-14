@@ -29,7 +29,7 @@ const Header = () => {
             <div className=" rounded-full p-2 mr-3">
               <img src={logo} alt="Heart MM Logo" className="w-12 h-12 rounded-full object-contain" />
             </div>
-           <a href="/"> <span className="text-xl font-bold text-red-900">MarryingMuslims</span></a>
+           <a href="/"> <span className="text-xl font-bold text-red-900">Marrying Muslims</span></a>
           </div>
 
           {/* Desktop Nav */}

@@ -28,7 +28,7 @@ const LogoHeader = () => {
                     <div className="rounded-full p-2 overflow-hidden">
                       <img src={logo} alt="Heart MM Logo" className="w-12 h-12 object-contain" />
                     </div>
-                    <span className="text-xl font-bold text-red-900 ">MarryingMuslims</span>
+                    <span className="text-xl font-bold text-red-900 ">Marrying Muslims</span>
                   </Link>
                   <Link to="/" className="flex items-center gap-1 text-base text-gray-600 hover:text-black  transition-colors font-semibold">
                     <ArrowLeft className="w-4 h-4" />
